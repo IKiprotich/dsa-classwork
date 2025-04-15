@@ -1,16 +1,19 @@
 a = 12
-b = 10 
-if a > b:
-    print("a is greater than b")
-    
-if (a > b):
-    print("a is greater than b")
-else:
-    print("a is less than b")
+b = 10
+GREATER_MESSAGE = "a is greater than b"
+LESSER_MESSAGE = "a is less than b"
 
 if a > b:
-    print("a is greater than b")
+    print(GREATER_MESSAGE)
+    
+if (a > b):
+    print(GREATER_MESSAGE)
+else:
+    print(LESSER_MESSAGE)
+
+if a > b:
+    print(GREATER_MESSAGE)
 elif a == b:
     print("a is equal to b")
 else:
-    print("a is less than b")
+    print(LESSER_MESSAGE)
