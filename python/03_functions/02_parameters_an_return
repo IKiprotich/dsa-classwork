@@ -1,0 +1,102 @@
+# 1. Parameters in Python
+# Parameters are variables that are used in a function definition to accept input values.
+# They allow you to pass data into a function when it is called.
+
+# Example: Function with Parameters
+def greet(name):
+    """
+    This function takes a parameter 'name' and prints a greeting message.
+    """
+    print(f"Hello, {name}!")
+
+# Calling the function with an argument
+greet("Ian")  # Output: Hello, Ian!
+
+
+# 2. Default Parameters
+# You can assign default values to parameters. If no argument is passed, the default value is used.
+
+def greet_with_default(name="Guest"):
+    """
+    This function uses a default parameter value.
+    """
+    print(f"Hello, {name}!")
+
+# Calling the function without an argument
+greet_with_default()  # Output: Hello, Guest!
+
+# Calling the function with an argument
+greet_with_default("Ian")  # Output: Hello, Ian!
+
+
+# 3. Return Statement
+# The `return` statement is used to send a value back to the caller of the function.
+
+# Example: Function with a Return Value
+def add_numbers(a, b):
+    """
+    This function takes two parameters, adds them, and returns the result.
+    """
+    return a + b
+
+# Calling the function and storing the result
+result = add_numbers(5, 3)
+print(result)  # Output: 8
+
+
+# 4. Multiple Return Values
+# A function can return multiple values as a tuple.
+
+def calculate(a, b):
+    """
+    This function returns the sum and product of two numbers.
+    """
+    return a + b, a * b
+
+# Calling the function and unpacking the result
+sum_result, product_result = calculate(4, 5)
+print(f"Sum: {sum_result}, Product: {product_result}")  # Output: Sum: 9, Product: 20
+
+
+# 5. Keyword Arguments
+# You can pass arguments to a function using the parameter names (keywords).
+
+def describe_person(name, age):
+    """
+    This function takes two parameters and prints a description.
+    """
+    print(f"{name} is {age} years old.")
+
+# Calling the function with keyword arguments
+describe_person(age=25, name="Ian")  # Output: Ian is 25 years old.
+
+
+# 6. Arbitrary Arguments (*args)
+# Use `*args` to accept a variable number of positional arguments.
+
+def sum_all(*args):
+    """
+    This function takes any number of arguments and returns their sum.
+    """
+    return sum(args)
+
+# Calling the function with multiple arguments
+print(sum_all(1, 2, 3, 4))  # Output: 10
+
+
+# 7. Arbitrary Keyword Arguments (**kwargs)
+# Use `**kwargs` to accept a variable number of keyword arguments.
+
+def print_details(**kwargs):
+    """
+    This function takes any number of keyword arguments and prints them.
+    """
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+# Calling the function with multiple keyword arguments
+print_details(name="Ian", age=25, country="Kenya")
+# Output:
+# name: Ian
+# age: 25
+# country: Kenya
