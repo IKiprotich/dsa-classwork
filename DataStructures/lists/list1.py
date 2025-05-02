@@ -19,7 +19,7 @@ print(f"  After appending 50: {my_list}")
 my_list.insert(2, 99)
 print(f"  After inserting 99 at index 2: {my_list}")
 
-# Removes first occurrence of value 25
+# Removes first occurrence(only) of value 25
 my_list.remove(25)
 print(f"  After removing 25: {my_list}")
 
